@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.heading{
+  color: white;
+}
 
 .App-logo {
   height: 40vmin;
@@ -12,7 +15,11 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+span{
+  margin-left: 20px;
+  font-size: 9px;
+  font-weight: bolder;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -139,4 +146,92 @@ h4 {
     transform: translateY(0px) scaleY(1);
     opacity: 1;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    animation: heartbeat 1s infinite;
+    margin:0 auto;
+    background-color: transparent;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 10px;
+    width: 50px;
+    height: 80px;
+    background: rgb(255, 0, 0);
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
+
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+#transparent{
+  background-color: transparent;
+  
 }

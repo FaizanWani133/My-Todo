@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TodoItem({ title, status }) {
+function TodoItem({ title, status,changeStatus,id }) {
   const [flag, setStatus] = React.useState(status);
   const color = {
     background: '#FF5733',
@@ -19,9 +19,13 @@ function TodoItem({ title, status }) {
     underline.opacity = '1';
   }
 
-  function changeStatus() {
-    setStatus(!flag);
+  function toggle() {
+    // status = React.useState(false)
+    status = setStatus(!flag);
+    changeStatus(id)
+    
   }
+  
 
   return (
     <div>
@@ -30,7 +34,7 @@ function TodoItem({ title, status }) {
           {title}
         </h4>
       </div>
-      <button style={color} onClick={changeStatus} className='outer'></button>
+      <button style={color} onClick={toggle} className='outer'></button>
     </div>
   );
 }

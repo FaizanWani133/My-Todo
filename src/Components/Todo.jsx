@@ -9,7 +9,13 @@ function Todo() {
   function handleInput(event) {
     setText(event.target.value);
   }
+ 
+  function Heart(){
+    
+    return (<div id="transparent"><div  id="heart"></div><div  id="heart"></div><div  id="heart"></div></div>)
+  }
   function handleTodo() {
+   
     const obj = {
       id: Date.now(),
       title: text,
@@ -35,7 +41,9 @@ function Todo() {
         />
         <button onClick={handleTodo}>+</button>
       </div>
-      <TodoList todos={todos} />
+      <TodoList todos={todos.sort(function(a,b){
+return a.status -b.status
+      })} fn={setTodos} />
       {todos.length > 0 ? (
         <button className='resetBtn' onClick={onClick}>
           Reset
@@ -43,6 +51,7 @@ function Todo() {
       ) : (
         <br></br>
       )}
+      {text === "biku" && <Heart /> }
     </div>
   );
 }
