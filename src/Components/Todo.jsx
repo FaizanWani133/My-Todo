@@ -7,6 +7,7 @@ function Todo() {
     JSON.parse(localStorage.getItem('todos')) || []
   );
   function handleInput(event) {
+    
     setText(event.target.value);
   }
  
@@ -14,7 +15,8 @@ function Todo() {
     
     return (<div id="transparent"><div  id="heart"></div><div  id="heart"></div><div  id="heart"></div></div>)
   }
-  function handleTodo() {
+  function handleTodo(event) {
+    event.preventDefault();
    
     const obj = {
       id: Date.now(),
@@ -33,6 +35,7 @@ function Todo() {
   return (
     <div className='main'>
       <div className='inputDiv'>
+        <form >
         <input
           placeholder='Write Something'
           type='text'
@@ -40,7 +43,9 @@ function Todo() {
           onChange={handleInput}
         />
         <button onClick={handleTodo}>+</button>
+        </form>
       </div>
+      
       <TodoList todos={todos.sort(function(a,b){
 return a.status -b.status
       })} fn={setTodos} />

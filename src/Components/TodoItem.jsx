@@ -9,14 +9,19 @@ function TodoItem({ title, status,changeStatus,id }) {
     textDecoration: 'none',
     opacity: '1',
   };
+  const dark={
+    background:"white"
+  }
   if (flag) {
     color.background = '#50C878';
     underline.textDecoration = 'line-through';
     underline.opacity = '.5';
+    dark.background="grey"
   } else {
     color.background = '#FF5733';
     underline.textDecoration = 'none';
     underline.opacity = '1';
+    dark.background="white"
   }
 
   function toggle() {
@@ -28,7 +33,7 @@ function TodoItem({ title, status,changeStatus,id }) {
   
 
   return (
-    <div>
+    <div style={dark}>
       <div>
         <h4 style={underline} className='todo'>
           {title}
