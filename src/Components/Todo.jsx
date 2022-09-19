@@ -51,7 +51,7 @@ return a.status -b.status
       ) : (
         <br></br>
       )}
-      {text === "biku" && <Heart /> }
+      {text === "Biku"  && <Heart /> }
     </div>
   );
 }
