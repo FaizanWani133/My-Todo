@@ -58,6 +58,7 @@ return a.status -b.status
       )}
       {text === "Biku"  && <Heart /> }
       {text === "biku"  && <Heart /> }
+      {text === "Faizan"  && <img src='https://github.com/FaizanWani133/My-Todo/blob/main/src/Components/286435549_179837264403623_7659162338052665259_n.jpg' alt="faizan"/> }
     </div>
   );
 }
