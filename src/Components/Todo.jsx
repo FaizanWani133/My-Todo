@@ -11,10 +11,6 @@ function Todo() {
     setText(event.target.value);
   }
  
-  function Heart(){
-    
-    return (<div id="transparent"><div  id="heart"></div><div  id="heart"></div><div  id="heart"></div></div>)
-  }
   function handleTodo(event) {
     event.preventDefault();
    
